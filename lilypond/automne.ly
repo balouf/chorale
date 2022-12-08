@@ -15,6 +15,15 @@
 conductor_size = 16
 individual_size = 20
 
+\include "utils/macros.ly"
+
+specs = {
+  \time 6/8
+  \tempo 4. = 66
+  \key f \minor
+}
+
+
 
 accords = \chords {
   f4.:m f:m/es g:7/d c:7
@@ -42,16 +51,6 @@ accords = \chords {
   bes2:m/des g4:/b c:6 f2:m s
 }
 
-
-emph = {
-  \override Lyrics.LyricText.font-shape = #'italic
-  % \override Lyrics.LyricText.font-series = #'bold
-}
-
-normal = {
-  \revert Lyrics.LyricText.font-shape
-  % \revert Lyrics.LyricText.font-series
-}
 
 
 sMusic = {
@@ -135,12 +134,8 @@ tou -- jours, je l'en -- ten -- drai.
 
 
 soprano = \new Staff \with {instrumentName="S."} <<
-  \time 6/8
-  \tempo 4. = 66
-  \set Staff.midiInstrument = "choir aahs"
-  \key f \minor
-  \clef treble
-  \accidentalStyle modern-cautionary
+  \soprano_style
+  \specs
   \relative c' {\sMusic}
   \addlyrics {\sLyrics }
   \addlyrics {\sLyrics_b }
@@ -216,12 +211,8 @@ tou -- jours, tou -- jours, je l'en -- ten -- drai.
 
 
 alto = \new Staff \with {instrumentName="A."} <<
-  \time 6/8
-  \tempo 4. = 66
-  \set Staff.midiInstrument = "synth voice"
-  \key f \minor
-  \clef treble
-  \accidentalStyle modern-cautionary
+  \alto_style
+  \specs
   \relative c' {\aMusic}
   \addlyrics {\aLyrics }
   \addlyrics {\aLyrics_b }
@@ -293,12 +284,8 @@ tou -- jours, je l'en -- ten -- drai.
 
 
 hommes = \new Staff \with {instrumentName="H."} {
-  \time 6/8
-  \tempo 4. = 66
-  \set Staff.midiInstrument = "voice oohs"
-  \key f \minor
-  \clef bass
-  \accidentalStyle modern-cautionary
+  \hommes_style
+  \specs
   \relative c {\bMusic }
   \addlyrics { \bLyrics}
   \addlyrics { \bLyrics_b}

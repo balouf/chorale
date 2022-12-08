@@ -15,6 +15,13 @@
 conductor_size = 15
 individual_size = 20
 
+\include "utils/macros.ly"
+
+specs = {  \time 4/4
+  \tempo 4 = 66
+  \key f \major
+}
+
 
 accords = \chords {
   s1
@@ -100,12 +107,8 @@ sLyrics = \lyricmode { dé -- gou -- pil -- lées
 
 
 soprano = \new Staff \with {instrumentName="S."} <<
-  \time 4/4
-  \tempo 4 = 66
-  \set Staff.midiInstrument = "choir aahs"
-  \key f \major
-  \clef treble
-  \accidentalStyle modern-cautionary
+  \soprano_style
+  \specs
   \relative c' {\introMusic \sMusic \outroMusic}
   \addlyrics {\introLyrics \sLyrics \outroLyrics}
 >>
@@ -150,12 +153,8 @@ aLyrics = \lyricmode { dé -- gou -- pil -- lées
 
 
 alto = \new Staff \with {instrumentName="A."} <<
-  \time 4/4
-  \tempo 4 = 66
-  \set Staff.midiInstrument = "synth voice"
-  \key f \major
-  \clef treble
-  \accidentalStyle modern-cautionary
+  \alto_style
+  \specs
   \relative c' {\introMusic \aMusic \transpose c c' {\outroMusic}}
   \addlyrics {\introLyrics \aLyrics \outroLyrics}
 >>
@@ -204,12 +203,8 @@ bLyrics = \lyricmode { dé -- gou -- pil -- lées
 }
 
 hommes = \new Staff \with {instrumentName="H."} {
-  \time 4/4
-  \tempo 4 = 66
-  \set Staff.midiInstrument = "voice oohs"
-  \key f \major
-  \clef bass
-  \accidentalStyle modern-cautionary
+  \hommes_style
+  \specs
   \relative c {\introMusic \bMusic \outroMusic}
   \addlyrics {\introLyrics \bLyrics \outroLyrics}
 }

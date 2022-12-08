@@ -15,6 +15,13 @@
 conductor_size = 18
 individual_size = 20
 
+\include "utils/macros.ly"
+
+
+specs = { \time 4/4
+  \tempo 4 = 120
+  \key f \major
+}
 
 accords = \chords {
   \partial 4 s4
@@ -69,12 +76,8 @@ pour la vi __ _ _ _ e. __
 
 
 soprano = \new Staff \with {instrumentName="S."} <<
-  \time 4/4
-  \tempo 4 = 120
-  \set Staff.midiInstrument = "choir aahs"
-  \key f \major
-  \clef treble
-  \accidentalStyle modern-cautionary
+  \soprano_style
+  \specs
   \relative c' {\sMusic}
   \addlyrics {\sLyrics }
 >>
@@ -127,12 +130,8 @@ aLyrics = \lyricmode {
 
 
 alto = \new Staff \with {instrumentName="A."} <<
-  \time 4/4
-  \tempo 4 = 120
-  \set Staff.midiInstrument = "synth voice"
-  \key f \major
-  \clef treble
-  \accidentalStyle modern-cautionary
+  \alto_style
+  \specs
   \relative c' {\aMusic}
   \addlyrics {\aLyrics }
 >>
@@ -148,12 +147,12 @@ f2 r4 a bes2 \tuplet 3/2 { c4 bes g } f2( e d4) r
 f \tuplet 3/2 { e\( c\) cis } d2 f4 a g2( c,) f r
 \key a \major
 r fis d \tuplet 3/2 { e4 fis gis } a2. fis4
-b2 \tuplet 3/2 { b4 a gis } a a \tuplet 3/2 { gis a gis }
+b2 \tuplet 3/2 { b4 a gis } a \breathe a \tuplet 3/2 { gis a gis }
 \tuplet 3/2 { fis gis fis } e r
 \key c \major
 r2 a f \tuplet 3/2 { g4 a b } c2. a4
 d2 \tuplet 3/2 { d4 c b }
-c c \tuplet 3/2 { bes c bes } \tuplet 3/2 { a bes a } g c,
+c \breathe c \tuplet 3/2 { bes c bes } \tuplet 3/2 { a bes a } g c,
 \key f \major
 f( e)-> d( f)-> g2 \tuplet 3/2 { c,4 d e } f2
 r4 a bes2 \tuplet 3/2 { c4 bes g } f2( e d4) r
@@ -184,12 +183,8 @@ la mer a ber -- cé mon coeur pour la vi __ e. __
 }
 
 hommes = \new Staff \with {instrumentName="H."} {
-  \time 4/4
-  \tempo 4 = 120
-  \set Staff.midiInstrument = "voice oohs"
-  \key f \major
-  \clef bass
-  \accidentalStyle modern-cautionary
+  \hommes_style
+  \specs
   \relative c {\bMusic }
   \addlyrics { \bLyrics}
 }
