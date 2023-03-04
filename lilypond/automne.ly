@@ -12,10 +12,11 @@
 
 }
 
-conductor_size = 16
+conductor_size = 15
 individual_size = 20
 
 \include "utils/macros.ly"
+\include "utils/AccordsJazzDefs.ly"
 
 specs = {
   \time 6/8
@@ -26,6 +27,7 @@ specs = {
 
 
 accords = \chords {
+  \repeat segno 2 {
   f4.:m f:m/es g:7/d c:7
   g2.:m7/bes c4. f:m
   a2.:m7.5- s4.  bes:m
@@ -49,11 +51,14 @@ accords = \chords {
   s2 aes1
   g:m7.5- f:m/aes
   bes2:m/des g4:/b c:6 f2:m s
+  \bar "|."
+  }
 }
 
 
 
 sMusic = {
+  \repeat segno 2 {
   f8 g aes f g aes f aes f g4.
   g8 aes bes g aes bes g bes aes c4.
   c8 des es c des es c es des bes4.
@@ -84,7 +89,8 @@ sMusic = {
   4 b8 c
   \time 4/4
   des8. 16 bes8 8 g4 des'
-  c2 4 f, bes bes8 aes g4 <c e,>8 <bes g> <aes f>2 r^"D.C." \bar "|."
+  c2 4 f, bes bes8 aes g4 <c e,>8 <bes g> <aes f>2 r
+  }
 }
 
 sLyrics = \lyricmode {
@@ -142,6 +148,7 @@ soprano = \new Staff \with {instrumentName="S."} <<
 >>
 
 aMusic = {
+  \repeat segno 2 {
  f8 g aes f g aes f aes f g4.
  g8 aes bes g aes bes g e f aes4.
  <es ges>2.~ 4. <des f>
@@ -166,7 +173,7 @@ aMusic = {
  4 b8 c
  \time 4/4
  bes8. 16 g8 8 fes4 4
- aes2 4 f bes bes8 aes g4 aes8 c, f2 r^"D.C." \bar "|."
+ aes2 4 f bes bes8 aes g4 aes8 c, f2 r}
  }
 
 aLyrics = \lyricmode {
@@ -219,7 +226,7 @@ alto = \new Staff \with {instrumentName="A."} <<
 >>
 
 
-bMusic = {r2. r r r
+bMusic = {\repeat segno 2 {r2. r r r
 a'8 bes c a bes c a a a bes4.
 g2.( f4. e)
 
@@ -238,7 +245,7 @@ g8 des c8. 16 4~ 4 d8 e f4 4~ 8
 c bes d es2~ 4 4\fermata aes2~
 \time 2/4 4 r \time 4/4
 r g8 des bes des bes' g aes2 f4 4
-des4 8 c b4 c8 e f2 r^"D.C." \bar "|."
+des4 8 c b4 c8 e f2 r}
 }
 
 bLyrics = \lyricmode {

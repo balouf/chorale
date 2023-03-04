@@ -12,10 +12,11 @@
 
 }
 
-conductor_size = 15
+conductor_size = 17
 individual_size = 20
 
 \include "utils/macros.ly"
+\include "utils/AccordsJazzDefs.ly"
 
 specs = {  \time 4/4
   \tempo 4 = 66

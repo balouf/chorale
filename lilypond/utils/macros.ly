@@ -1,3 +1,4 @@
+
 emph = {
   \override Lyrics.LyricText.font-shape = #'italic
   % \override Lyrics.LyricText.font-series = #'bold
@@ -18,6 +19,13 @@ soprano_style = {
 
 
 alto_style = {
+  \set Staff.midiInstrument = "synth voice"
+  \clef treble
+  \accidentalStyle modern-cautionary
+
+}
+
+tenor_style = {
   \set Staff.midiInstrument = "synth voice"
   \clef treble
   \accidentalStyle modern-cautionary

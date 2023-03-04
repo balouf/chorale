@@ -12,10 +12,12 @@
 
 }
 
-conductor_size = 18
-individual_size = 20
+conductor_size = 15
+individual_size = 18
 
 \include "utils/macros.ly"
+\include "utils/AccordsJazzDefs.ly"
+
 
 
 specs = {  \time 4/4
@@ -40,6 +42,7 @@ accords = \chords {
   g:m9 s es:9 s
   }
   \alternative {{
+  \set Score.voltaSpannerDuration = #(ly:make-moment 12/4)
   a:m7 d:9-.11+
   g:m7 c:9-.11+
   \bar "||"
@@ -47,7 +50,7 @@ accords = \chords {
   g:m7 ges:7.11+ f:maj7
 s
                 }{
-
+\break
 a:m7 d:7.5-
   bes:m es:11+
   \bar "||"

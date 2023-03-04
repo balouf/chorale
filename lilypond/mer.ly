@@ -16,6 +16,7 @@ conductor_size = 18
 individual_size = 20
 
 \include "utils/macros.ly"
+\include "utils/AccordsJazzDefs.ly"
 
 
 specs = { \time 4/4
