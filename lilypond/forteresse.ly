@@ -21,7 +21,7 @@ individual_size = 20
 
 specs = {  \time 3/4
   \tempo 4 = 66
-  \key c \minor
+  \key d \minor
     \set Timing.beamExceptions = #'()
     \set Timing.baseMoment = #(ly:make-moment 1/4)
     \set Timing.beatStructure = 1,1,1
@@ -29,10 +29,10 @@ specs = {  \time 3/4
 }
 
 
-accords = \chords {
+accords = \transpose c d {\chords {
   c2.:m g:7 c2.:m g:7 f:m fis:m7.5- c4:m/g g2:7
   c2.:m g:7 c:7 f:m f:m7 fis:m7.5- c:m/g g:7 c:m g:7
-  c:7 f:m f:m7 f:m7.5- c2:m/g g4:7 c2.:m
+  c:7 f:m f:m7 fis:m7.5- c2:m/g g4:7 c2.:m
   \break
   \repeat volta 6 {
   f:m d:m g:7 c:m/es aes:maj7.6
@@ -51,7 +51,7 @@ accords = \chords {
   }}
   }
 }
-
+}
 
 
 
@@ -145,8 +145,8 @@ sLyrics = \lyricmode {
 soprano = \new Staff \with {instrumentName="S."} <<
   \soprano_style
   \specs
-  \relative c' {
-    \sMusic}
+  \transpose c d {\relative c' {
+    \sMusic}}
   \addlyrics {\sLyrics}
 >>
 
@@ -198,7 +198,7 @@ aLyrics = \lyricmode {Oh __ Oh __ _
                        dont les murs sont faits __ de pro -- mes -- ses __
                        C'est là que dor -- ment les a -- mants __
                        Oh __
-                       Et quand leurs lè -- vres se re -- joi -- gnet __ 
+                       Et quand leurs lè -- vres se re -- joi -- gnent __ 
                        C'est tout l'u -- ni -- vers __ qui s'é -- loi -- gne __
                        Au -- tour le si -- lence est par -- fait __
                        Comme un ins -- tant d'é -- ter -- ni -- té.
@@ -228,7 +228,7 @@ aLyrics = \lyricmode {Oh __ Oh __ _
 alto = \new Staff \with {instrumentName="A."} <<
   \alto_style
   \specs
-  \relative c' {\aMusic}
+  \transpose c d {\relative c' {\aMusic}}
   \addlyrics {\aLyrics}
 >>
 
@@ -260,7 +260,7 @@ es f g d f d c2.
 }
 \volta 4 {r2 r8 c c8. d16 \times 2/3 {es8 f g~} \times 2/3 {g bes aes~}
 aes g~ g4 r8 g
-g d' d c c8. g16 g8 f~ f4 r8 f
+g d' d8. c16 c8 g g8 f~ f4 r8 f
 bes4 \times 2/3 {aes8 g f} \times 2/3 {aes g es~} es2 r8 c
 c d es4 \times 2/3 {f8 g aes} d,2 r8 es
 es f es d~ \times 2/3 {d c es} d d~ d4 r8 e
@@ -277,7 +277,7 @@ es f g d f d c2.
 
 bLyrics = \lyricmode { Oh __ Oh__ _
                        _oh __
-                       Et quand leurs lè -- vres se re -- joi -- gnet __ 
+                       Et quand leurs lè -- vres se re -- joi -- gnent __ 
                        C'est tout l'u -- ni -- vers __ qui s'é -- loi -- gne __
                        Au -- tour le si -- lence est par -- fait __
                        Comme un ins -- tant d'é -- ter -- ni -- té.
@@ -309,7 +309,7 @@ bLyrics = \lyricmode { Oh __ Oh__ _
 hommes = \new Staff \with {instrumentName="H."} {
   \hommes_style
   \specs
-  \relative c {\bMusic}
+  \transpose c d {\relative c {\bMusic}}
   \addlyrics {\bLyrics}
 }
 

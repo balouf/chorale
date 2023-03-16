@@ -8,8 +8,7 @@ La structure du dépôt est la suivante :
 
 - Chaque morceau est dans un répertoire dédié
   - À l'intérieur de chaque répertoire, il y a les PDFs et fichier Midi associés au morceau.
-  - Quand plusieurs variantes d'un même morceau existe, elles sont dans des répertoires différents (exemple: *forteresse*, 
-    en do et *forteresse_d*, en ré.
+  - Il y a en général un *conducteur* (*tutti*) plus une version par voix.
 - le répertoire *lilypond* est un répertoire spécial : il contient les sources des différents morceaux 
   (inutile de vous en inquiéter si seuls les morceaux vous intéressent).
 - le fichier *update.py* est le script pour créer et ranger les fichiers des morceaux à partir des sources
