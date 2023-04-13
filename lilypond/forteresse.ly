@@ -43,10 +43,10 @@ accords = \transpose c d {\chords {
   \alternative {
   \volta 6 \fine
   \volta 2 {s c2.:m g:7 c:7 f:m f:m7 fis:m7.5- c:m/g g:7 c:m g:7
-  c:7 f:m f:m7 f:m7.5- c2:m/g g4:7 c2.:m}
+  c:7 f:m f:m7 fis:m7.5- c2:m/g g4:7 c2.:m}
   \volta 4 {\break
             s c2.:m g:7 c:7 f:m f:m7 fis:m7.5- c:m/g g:7 c:m g:7
-  c:7 f:m f:m7 f:m7.5- c2:m/g g4:7 c2.:m}
+  c:7 f:m f:m7 fis:m7.5- c2:m/g g4:7 c2.:m}
   }
   }}
   }
