@@ -124,7 +124,7 @@ sLyrics = \lyricmode {
   Aus -- si fin __ qu'un pa -- pier de soie __
   Mais qui ne se dé -- chi -- re pas
   
-  La peau et le peau qui se tou __ chent
+  La peau et la peau qui se tou __ chent
   Les mots qui nais -- sent sur la bou -- che __
   Di -- sant tout bas comme un se -- cret
   Qu'on peut tout prendre et tout don -- er
@@ -210,7 +210,7 @@ aLyrics = \lyricmode {Oh __ Oh __ _
   Aus -- si fin __ qu'un pa -- pier de soie __
   Mais qui ne se dé -- chi -- re pas
   
-  La peau et le peau qui se tou __ chent
+  La peau et la peau qui se tou __ chent
   Les mots qui nais -- sent sur la bou -- che __
   Di -- sant tout bas comme un se -- cret
   Qu'on peut tout prendre et tout don -- er
@@ -260,7 +260,7 @@ es f g d f d c2.
 }
 \volta 4 {r2 r8 c c8. d16 \times 2/3 {es8 f g~} \times 2/3 {g bes aes~}
 aes g~ g4 r8 g
-g d' d8. c16 c8 g g8 f~ f4 r8 f
+g d' d c c8. g16 g8 f~ f4 r8 f
 bes4 \times 2/3 {aes8 g f} \times 2/3 {aes g es~} es2 r8 c
 c d es4 \times 2/3 {f8 g aes} d,2 r8 es
 es f es d~ \times 2/3 {d c es} d d~ d4 r8 e
@@ -289,7 +289,7 @@ bLyrics = \lyricmode { Oh __ Oh__ _
   Aus -- si fin __ qu'un pa -- pier de soie __
   Mais qui ne se dé -- chi -- re pas
   
-  La peau et le peau qui se tou __ chent
+  La peau et la peau qui se tou __ chent
   Les mots qui nais -- sent sur la bou -- che __
   Di -- sant tout bas comme un se -- cret
   Qu'on peut tout prendre et tout don -- er
